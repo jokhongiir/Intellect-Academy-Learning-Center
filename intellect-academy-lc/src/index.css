@@ -1,0 +1,138 @@
+:root {
+  /* MAIN COLORS */
+  --primary: #3B3F99;
+  --primary-dark: #2E327D;
+  --accent: #F57C00;
+  --white: #FFFFFF;
+
+  /* BACKGROUND */
+  --bg: #ffffff;
+  --bg-soft: #f6f7fb;
+
+  /* GLASS */
+  --glass: rgba(255, 255, 255, 0.7);
+  --border: rgba(15, 23, 42, 0.08);
+
+  /* TEXT */
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+
+  /* 🌟 PREMIUM WHITE BACKGROUND + PATTERN */
+  background:
+    /* soft grid lines */
+    linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px),
+
+    /* soft brand glow */
+    radial-gradient(circle at 15% 20%, rgba(59,63,153,0.06), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(245,124,0,0.05), transparent 45%),
+
+    var(--bg);
+
+  background-size: 60px 60px, 60px 60px, auto, auto;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.glass:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3 {
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTON CLEAN LOOK
+========================= */
+
+button {
+  font-family: inherit;
+}
+
+/* =========================
+   SCROLLBAR MODERN
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 10px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

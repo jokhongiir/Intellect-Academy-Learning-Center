@@ -1,0 +1,159 @@
+:root {
+  --primary: #376fff;
+  --accent: #1a5bff;
+  --text-muted: #555555;
+}
+
+/* ========================= */
+/* SECTION */
+.branches-map-section {
+  padding: 80px 0px;
+  background: #ffffff; /* 🔥 white */
+  text-align: center;
+}
+
+/* ========================= */
+/* TITLE (About h2 bilan mos) */
+.branches-map-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 60px;
+}
+
+.branches-map-title span {
+  color: var(--accent);
+}
+
+/* ========================= */
+/* CONTAINER */
+.branches-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* ================= */
+/* MAP */
+.branches-map {
+  flex: 2;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= */
+/* IMAGES */
+.branches-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.branch-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.branch-image:hover {
+  transform: scale(1.03);
+}
+
+/* ================= */
+/* POPUP */
+.popup-content h3 {
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.popup-content p {
+  margin: 3px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+}
+
+/* ========================= */
+/* TABLET */
+@media (max-width: 1024px) {
+  .branches-container {
+    flex-direction: column;
+  }
+
+  .branches-map {
+    height: 360px;
+    width: 100%;
+  }
+
+  .branches-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .branch-image {
+    height: 170px;
+  }
+
+  /* Title responsive */
+  .branches-map-title {
+    font-size: 36px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+@media (max-width: 768px) {
+  .branches-map-section {
+    padding: 70px 20px;
+  }
+
+  /* Title responsive */
+  .branches-map-title {
+    font-size: 32px; /* About h2 bilan moslashgan */
+  }
+
+  .branches-map {
+    height: 280px;
+  }
+
+  .branches-images {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .branch-image {
+    height: 110px;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .branches-map {
+    height: 240px;
+  }
+
+  .branches-images {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-image {
+    height: 140px;
+  }
+
+  /* Title responsive */
+  .branches-map-title {
+    font-size: 35px;
+  }
+}

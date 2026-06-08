@@ -1,0 +1,274 @@
+:root {
+  --primary: #3B3F99;
+  --accent: #F57C00;
+  --text: #0f172a;
+  --muted: #64748b;
+
+  --bg: #ffffff;
+
+  --radius-lg: 28px;
+  --radius-md: 16px;
+
+  --shadow-sm: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 18px 50px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 30px 80px rgba(15, 23, 42, 0.12);
+}
+
+/* ================= MAIN SECTION ================= */
+.about {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.9s ease;
+}
+
+.about.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ================= CONTAINER ================= */
+.about-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  /* width: 92%; */
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ================= LEFT ================= */
+.about-left .badge {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: var(--primary);
+  background: rgba(59,63,153,0.08);
+
+  margin-bottom: 18px;
+}
+
+.about-left h2 {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.1;
+
+  color: var(--text);
+}
+
+.about-left h2 span {
+  display: block;
+  margin-top: 8px;
+
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-left p {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: var(--muted);
+  max-width: 520px;
+}
+
+/* ================= GRID ================= */
+.grid {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+
+  border-radius: var(--radius-md);
+  padding: 18px;
+
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: 0.35s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ICON */
+.icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(245, 124, 0, 0.12);
+  color: var(--accent);
+
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* TEXT */
+.card h4 {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 0;
+}
+
+.card p {
+  margin: 2px 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.card .desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ================= RIGHT ================= */
+.right {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: 0.9s ease;
+}
+
+.right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.imageBox {
+  position: relative;
+  max-width: 420px;
+}
+
+.imageBox img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ================= TAGS ================= */
+.tag {
+  position: absolute;
+
+  background: #fff;
+  border-radius: 12px;
+
+  padding: 10px 12px;
+
+  font-size: 12.5px;
+  font-weight: 700;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+  border-left: 4px solid var(--accent);
+  white-space: nowrap;
+}
+
+.t1 {
+  top: 40px;
+  left: -30px;
+}
+
+.t2 {
+  top: 160px;
+  right: -30px;
+  border-left-color: var(--primary);
+}
+
+.t3 {
+  bottom: 40px;
+  left: -20px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-left {
+    text-align: center;
+  }
+
+  .about-left p {
+    margin: 16px auto 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 90px 0;
+  }
+
+  .about-left h2 {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    display: none;
+  }
+}
