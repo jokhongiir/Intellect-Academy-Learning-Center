@@ -147,7 +147,7 @@
 
 .stats {
   margin-top: 48px;
-  display: flex; 
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
@@ -201,12 +201,9 @@
   color: var(--muted);
   font-size: 0.85rem;
   font-weight: 500;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
-/* ==========================================================================
-   RIGHT CONTENT (Rasm bloklari Desktop uchun)
-   ========================================================================== */
 .hero-image {
   display: flex;
   justify-content: center;
@@ -250,21 +247,24 @@
   z-index: 3;
 }
 
-.float.f1 { top: 10%; left: -5%; }
-.float.f2 { right: 3%; top: 1%; }
-.float.f3 { bottom: 10%; left: 5%; }
+.float.f1 {
+  top: 10%;
+  left: -5%;
+}
+.float.f2 {
+  right: 3%;
+  top: 1%;
+}
+.float.f3 {
+  bottom: 10%;
+  left: 5%;
+}
 
-/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
-
-/* Tablets and Small Laptops (max-width: 1150px) */
 @media (max-width: 1150px) {
   .hero {
     padding: 90px 0;
   }
 
-  /* Rasm va uning float kartalari yashiriladi */
   .hero-image {
     display: none !important;
   }
@@ -291,7 +291,6 @@
   }
 }
 
-/* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
   .buttons {
     flex-direction: column;
@@ -304,14 +303,13 @@
     width: 100%;
   }
 
-  /* Kichik ekranda stats doimo flex va yonma-yon qoladi, lekin joy yetmasa pastga tushadi */
   .stats {
     gap: 12px;
   }
-  
+
   .stat {
     padding: 12px 16px;
-    min-width: 140px; /* Kichik telefonlarda 2 tasi bitta qatorga sig'ishi uchun */
+    min-width: 140px;
   }
 
   .stat h3 {
@@ -323,7 +321,6 @@
   }
 }
 
-/* Kichik o'lchamdagi telefonlar uchun (max-width: 480px) */
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.85rem;
