@@ -1,6 +1,19 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
-import { FiArrowRight, FiPlay, FiUsers, FiBookOpen, FiAward, FiCheckCircle } from "react-icons/fi";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  useInView,
+} from "framer-motion";
+import {
+  FiArrowRight,
+  FiPlay,
+  FiUsers,
+  FiBookOpen,
+  FiAward,
+  FiCheckCircle,
+} from "react-icons/fi";
 import logo from "../../assets/logo.png";
 import "./Hero.css";
 
@@ -27,7 +40,13 @@ const STATS_DATA = [
   { id: 1, icon: <FiUsers />, count: 1500, suffix: "+", label: "O‘quvchilar" },
   { id: 2, icon: <FiBookOpen />, count: 50, suffix: "+", label: "Kurslar" },
   { id: 3, icon: <FiAward />, count: 10, suffix: "+", label: "Yillik tajriba" },
-  { id: 4, icon: <FiCheckCircle />, count: 95, suffix: "%", label: "Muvaffaqiyat" },
+  {
+    id: 4,
+    icon: <FiCheckCircle />,
+    count: 95,
+    suffix: "%",
+    label: "Muvaffaqiyat",
+  },
 ];
 
 const FLOATING_TAGS = [
@@ -48,13 +67,12 @@ const Hero = () => {
       <div className="bg-blur b2" aria-hidden="true" />
 
       <div className="container hero-container">
-        
-        <motion.div 
+        <motion.div
           className="hero-content"
           initial="hidden"
           animate="visible"
           variants={{
-            visible: { transition: { staggerChildren: 0.15 } }
+            visible: { transition: { staggerChildren: 0.15 } },
           }}
         >
           <motion.div variants={fadeInUp} className="badge">
@@ -67,8 +85,9 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p variants={fadeInUp}>
-            Intellect Academy — zamonaviy o‘quv markazi. Ingliz tili, IT, 
-            matematika, rus tili, arab tili va maktab tayyorlov kurslari bir joyda.
+            Intellect Academy — zamonaviy o‘quv markazi. Ingliz tili, IT,
+            matematika, rus tili, arab tili va maktab tayyorlov kurslari bir
+            joyda.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="buttons">
@@ -93,7 +112,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="hero-image"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -103,18 +122,22 @@ const Hero = () => {
             <img src={logo} alt="Intellect Academy logotipi" loading="eager" />
 
             {FLOATING_TAGS.map((tag) => (
-              <motion.div 
-                key={tag.id} 
+              <motion.div
+                key={tag.id}
                 className={`float ${tag.className}`}
                 animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: tag.id * 0.4 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                  delay: tag.id * 0.4,
+                }}
               >
                 {tag.text}
               </motion.div>
             ))}
           </div>
         </motion.div>
-
       </div>
     </section>
   );
