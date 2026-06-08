@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
-/* ==========================================================================
-   DESIGN VARIABLES
-   ========================================================================== */
 :root {
   --primary: #3b3f99;
   --primary-light: #5a60d6;
@@ -24,18 +21,12 @@
 
   --radius: 24px;
 }
-
-/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-
-/* ==========================================================================
-   HERO SECTION STRUCTURE
-   ========================================================================== */
 .hero {
   min-height: 100vh;
   position: relative;
