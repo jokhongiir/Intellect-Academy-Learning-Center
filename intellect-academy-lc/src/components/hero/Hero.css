@@ -42,10 +42,6 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  background:
-    radial-gradient(circle at top left, rgba(59, 63, 153, 0.12), transparent 45%),
-    radial-gradient(circle at bottom right, rgba(245, 124, 0, 0.12), transparent 45%),
-    var(--white);
   padding: 100px 0;
 }
 
