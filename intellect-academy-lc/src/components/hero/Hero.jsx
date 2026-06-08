@@ -4,7 +4,6 @@ import { FiArrowRight, FiPlay, FiUsers, FiBookOpen, FiAward, FiCheckCircle } fro
 import logo from "../../assets/logo.png";
 import "./Hero.css";
 
-// 1. RAQAMLAR ANIMATSIYASI UCHUN MAXSUS KOMPONENT
 const Counter = ({ from = 0, to, suffix = "" }) => {
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.round(latest) + suffix);
@@ -24,7 +23,6 @@ const Counter = ({ from = 0, to, suffix = "" }) => {
   return <motion.h3 ref={ref}>{rounded}</motion.h3>;
 };
 
-// 2. MA'LUMOTLAR STRUKTURASI (Endi 4 ta element)
 const STATS_DATA = [
   { id: 1, icon: <FiUsers />, count: 1500, suffix: "+", label: "O‘quvchilar" },
   { id: 2, icon: <FiBookOpen />, count: 50, suffix: "+", label: "Kurslar" },
@@ -51,7 +49,6 @@ const Hero = () => {
 
       <div className="container hero-container">
         
-        {/* LEFT CONTENT */}
         <motion.div 
           className="hero-content"
           initial="hidden"
@@ -74,7 +71,6 @@ const Hero = () => {
             matematika, rus tili, arab tili va maktab tayyorlov kurslari bir joyda.
           </motion.p>
 
-          {/* BUTTONS */}
           <motion.div variants={fadeInUp} className="buttons">
             <button className="primary-btn" type="button">
               Kurslarni ko‘rish <FiArrowRight aria-hidden="true" />
@@ -84,7 +80,6 @@ const Hero = () => {
             </button>
           </motion.div>
 
-          {/* STATS (Endi 4 ta blok) */}
           <motion.div variants={fadeInUp} className="stats">
             {STATS_DATA.map((stat) => (
               <div key={stat.id} className="stat">
@@ -98,7 +93,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
         <motion.div 
           className="hero-image"
           initial={{ opacity: 0, scale: 0.95 }}
