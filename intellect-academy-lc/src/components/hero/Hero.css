@@ -51,9 +51,6 @@
   z-index: 2;
 }
 
-/* ==========================================================================
-   LEFT CONTENT
-   ========================================================================== */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -100,7 +97,6 @@
   max-width: 580px;
 }
 
-/* BUTTONS STYLE */
 .buttons {
   margin-top: 36px;
   display: flex;
@@ -149,14 +145,11 @@
   box-shadow: var(--shadow-md);
 }
 
-/* ==========================================================================
-   STATS BLOCKS (Asosiy Flexbox qismi)
-   ========================================================================== */
 .stats {
   margin-top: 48px;
-  display: flex; /* Ustun emas, qator bo'lib chiqishi uchun */
+  display: flex; 
   flex-direction: row;
-  flex-wrap: wrap; /* Mobil ekranda siqilib ketmasdan keyingi qatorga tushishi uchun */
+  flex-wrap: wrap;
   gap: 16px;
   width: 100%;
   border-top: 1px solid rgba(15, 23, 42, 0.06);
@@ -164,8 +157,8 @@
 }
 
 .stat {
-  flex: 1; /* Hamma stat bloklar teng enni egallaydi */
-  min-width: 160px; /* Mobil telefonda judayam torayib ketmasligi uchun chegara */
+  flex: 1;
+  min-width: 160px;
   background: var(--glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -174,7 +167,7 @@
   padding: 16px 20px;
   box-shadow: var(--shadow-sm);
   display: flex;
-  flex-direction: row; /* Ikonka va matn har doim yonma-yon */
+  flex-direction: row;
   align-items: center;
   gap: 14px;
   transition: all 0.3s ease;
@@ -208,7 +201,7 @@
   color: var(--muted);
   font-size: 0.85rem;
   font-weight: 500;
-  white-space: nowrap; /* Matn xunuk bo'lib pastga tushib ketmasligi uchun */
+  white-space: nowrap; 
 }
 
 /* ==========================================================================
