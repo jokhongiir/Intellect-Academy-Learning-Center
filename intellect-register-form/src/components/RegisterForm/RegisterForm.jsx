@@ -23,7 +23,7 @@ const BRANCHES = [
 ];
 
 const TELEGRAM_BOT_TOKEN = "8524999950:AAFWuv495VHXhytltftk5_EpDvgX-clZU6w";
-const TELEGRAM_CHAT_IDS = ["5507546111", "1828687504", "744504387", "5704467"];
+const TELEGRAM_CHAT_IDS = ["5507546111", "1828687504", "744504387", "5704467", "6016232190"];
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({ fullName: "", phone: "+998 ", courses: [], branch: "" });
